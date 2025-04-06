@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riddle Generator Web App</title>
+  <style>
+    /* Inline CSS for the web app */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+    }
+    #riddleBox {
+      margin: 20px auto;
+      padding: 20px;
+      width: 50%;
+      background: #fff;
+      border: 2px solid #00796b;
+    }
+    button {
+      background: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h1>Riddle Generator</h1>
+  <div id="riddleBox">
+    <p id="riddleText">Click the button for a riddle!</p>
+    <button onclick="generateRiddle()">Generate Riddle</button>
+  </div>
+  
+  <script>
+    // JavaScript for a basic riddle generator
+    const riddles = [
+      "What has keys but can't open locks?",
+      "What gets wetter as it dries?",
+      "I speak without a mouth and hear without ears. What am I?"
+    ];
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById("riddleText").innerText = riddles[randomIndex];
+    }
+  </script>
+  
+  <!-- Navigation Link Back to Scratch Page -->
+  <p><a href="scratch.html">Back to Scratch Page</a></p>
+</body>
+</html>
